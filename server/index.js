@@ -4,7 +4,6 @@ const KoaSession = require('koa-session')
 const KoaBodyParser = require('koa-bodyparser')
 const KoaRouter = require('koa-router')
 const KoaLogger = require('koa-logger')
-const KoaProxy = require('koa-proxies')
 
 const consola = require('consola')
 
@@ -35,7 +34,9 @@ async function start() {
         await nuxt.ready()
     }
 
-    var router = new KoaRouter()
+    app.keys = ['hi'];
+    const router = new KoaRouter()
+    router.use("/api", require("./router/index").routes())
 
     app
         .use(KoaLogger())
