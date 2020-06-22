@@ -4,6 +4,9 @@ const router = new KoaRouter()
 require('../passport')
 const passport = require('koa-passport')
 
+router.use("/category", require("./category").routes())
+router.use("/song", require("./song").routes())
+router.use("/user", require("./user").routes())
 router.get("/list", ctx => {
     if (ctx.isAuthenticated()) {
 
