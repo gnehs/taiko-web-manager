@@ -1,11 +1,11 @@
 const { db } = require('./db')
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const category = new Schema({
+const Category = new Schema({
     id: Number,
     title: String
 }, { collection: 'categories' });
-const model = mongoose.model('category', category, 'categories')
+const model = mongoose.model('category', Category)
 async function getCategoriesList() {
     return (await model.find({}))
 }
@@ -14,5 +14,8 @@ async function editCategory() { }
 async function delCategory() { }
 
 module.exports = {
-    getCategoriesList, addCategory, editCategory, delCategory
+    getCategoriesList,
+    addCategory,
+    editCategory,
+    delCategory
 }

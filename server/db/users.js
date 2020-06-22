@@ -13,8 +13,19 @@ const User = new Schema({
     user_level: Number,
     session_id: String
 }, { collection: 'users' });
+const model = mongoose.model('user', User)
 async function login(username, password) { }
-async function gatUsersList() { }
+async function gatUsersList() {
+    return (await model.find({}))
+}
 async function addUser() { }
 async function delUser() { }
 async function editUser() { }
+
+module.exports = {
+    login,
+    gatUsersList,
+    addUser,
+    delUser,
+    editUser
+}

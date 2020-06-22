@@ -53,10 +53,18 @@ const Song = new Schema({
     hash: String
 
 }, { collection: 'songs' });
+const model = mongoose.model('song', Song)
 
 async function getSongsList() {
-
+    return (await model.find({}))
 }
 async function addSong() { }
 async function delSong() { }
 async function editSong() { }
+
+module.exports = {
+    getSongsList,
+    addSong,
+    delSong,
+    editSong
+}
