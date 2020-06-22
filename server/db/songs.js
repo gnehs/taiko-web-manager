@@ -54,7 +54,7 @@ const Song = new Schema({
 
 }, { collection: 'songs' });
 
-async function getSongList() {
+async function getSongsList() {
 
 }
 async function addSong() { }

@@ -14,7 +14,7 @@ const User = new Schema({
     session_id: String
 }, { collection: 'users' });
 async function login(username, password) { }
-async function gatUserList() { }
+async function gatUsersList() { }
 async function addUser() { }
 async function delUser() { }
 async function editUser() { }

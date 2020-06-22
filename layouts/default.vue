@@ -46,13 +46,18 @@ export default {
 			},
 			{
 				icon: "mdi-account-music",
-				title: "User",
-				to: "/user"
+				title: "Users",
+				to: "/users"
 			},
 			{
 				icon: "mdi-music-note",
-				title: "Song",
-				to: "/song"
+				title: "Songs",
+				to: "/songs"
+			},
+			{
+				icon: "mdi-music-note",
+				title: "Categories",
+				to: "/categories"
 			},
 		]
 	}),
