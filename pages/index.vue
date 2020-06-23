@@ -12,7 +12,7 @@
 					<v-icon>mdi-account-music</v-icon>
 				</v-list-item-icon>
 				<v-list-item-content>
-					<v-list-item-title>User</v-list-item-title>
+					<v-list-item-title>Users</v-list-item-title>
 				</v-list-item-content>
 			</v-list-item>
 			<v-divider />
@@ -21,7 +21,16 @@
 					<v-icon>mdi-music-note</v-icon>
 				</v-list-item-icon>
 				<v-list-item-content>
-					<v-list-item-title>Song</v-list-item-title>
+					<v-list-item-title>Songs</v-list-item-title>
+				</v-list-item-content>
+			</v-list-item>
+			<v-divider />
+			<v-list-item to="/categories">
+				<v-list-item-icon>
+					<v-icon>mdi-shape</v-icon>
+				</v-list-item-icon>
+				<v-list-item-content>
+					<v-list-item-title>Categories</v-list-item-title>
 				</v-list-item-content>
 			</v-list-item>
 		</v-card>

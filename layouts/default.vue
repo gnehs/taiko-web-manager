@@ -55,7 +55,7 @@ export default {
 				to: "/songs"
 			},
 			{
-				icon: "mdi-music-note",
+				icon: "mdi-shape",
 				title: "Categories",
 				to: "/categories"
 			},

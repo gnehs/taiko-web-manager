@@ -1,4 +1,5 @@
 # taiko-web-manager
+a manager for add songs and manage categories or users
 
 ## Build Setup
 

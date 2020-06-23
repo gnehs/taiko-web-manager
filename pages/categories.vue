@@ -2,24 +2,19 @@
 	<v-layout column>
 		<v-flex>
 			<v-card>
-				<v-card-title class="headline">最近新增</v-card-title>
-			</v-card>
-		</v-flex>
-		<v-flex>
-			<v-card>
-				<v-card-title class="headline">轉換進度</v-card-title>
+				<v-card-title class="headline">Categroies</v-card-title>
 				<v-card-text>
 					<v-simple-table fixed-header max-height="300px">
 						<thead>
 							<tr>
-								<th class="text-left">名稱</th>
-								<th class="text-left">進度</th>
+								<th class="text-left" width="10%">id</th>
+								<th class="text-left">title</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr v-for="item in progress" :key="item.name">
-								<td>{{ item.name }}</td>
-								<td>{{ item.status }}</td>
+							<tr v-for="item in categories" :key="item.id">
+								<td>{{ item.id }}</td>
+								<td>{{ item.title }}</td>
 							</tr>
 						</tbody>
 					</v-simple-table>
@@ -31,30 +26,20 @@
 <script>
 export default {
 	data: () => ({
-		recent: [
-			{
-				name: "逼比探險記",
-				img: "https://picsum.photos/1200/1200?5",
-				author: "逼比",
-				uuid: "biib1069"
-			},
-			{
-				name: "逼比買了動物園",
-				img: "https://picsum.photos/1200/1200?1",
-				author: "逼比",
-				uuid: "bibi1069"
-			}
-		],
-		progress: [
-			{
-				name: "逼比探險記",
-				status: "轉換中"
-			},
-			{
-				name: "逼比買了動物園",
-				status: "佇列中"
-			}
+		categories: [
 		]
-	})
+	}),
+	activated() {
+		this.getData()
+	},
+	created() {
+		this.getData()
+	},
+	methods: {
+		async getData() {
+			let categoryList = await this.$axios('/api/category/all')
+			this.categories = categoryList.data
+		}
+	}
 };
 </script>
