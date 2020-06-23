@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 const Category = new Schema({
     id: Number,
     title: String,
-    //aliases: null,
+    aliases: [],
     song_skin: {
         "background": String,
         "bg_img": String,
-        "border": [String, String],
+        "border": [],
         "info_fill": String,
         "outline": String,
         "sort": Number
