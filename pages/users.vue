@@ -7,16 +7,14 @@
 					<v-simple-table fixed-header max-height="300px">
 						<thead>
 							<tr>
+								<th class="text-left" width="10%">level</th>
 								<th class="text-left">username</th>
-								<th class="text-left">display name</th>
-								<th class="text-left">Level</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr v-for="item in users" :key="item.name">
-								<td>{{ item.username }}</td>
-								<td>{{ item.display_name }}</td>
+							<tr v-for="item in users" :key="item.name" @click="$router.push('/user/'+item._id)">
 								<td>{{ item.user_level }}</td>
+								<td>{{ item.username }}</td>
 							</tr>
 						</tbody>
 					</v-simple-table>

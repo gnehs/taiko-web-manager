@@ -7,7 +7,7 @@
 				</v-list-item-content>
 			</v-list-item>
 			<v-divider />
-			<v-list-item to="/user">
+			<v-list-item to="/users">
 				<v-list-item-icon>
 					<v-icon>mdi-account-music</v-icon>
 				</v-list-item-icon>
@@ -16,7 +16,7 @@
 				</v-list-item-content>
 			</v-list-item>
 			<v-divider />
-			<v-list-item to="/song">
+			<v-list-item to="/songs">
 				<v-list-item-icon>
 					<v-icon>mdi-music-note</v-icon>
 				</v-list-item-icon>
@@ -36,15 +36,3 @@
 		</v-card>
 	</v-row>
 </template>
-
-<script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
-export default {
-	components: {
-		Logo,
-		VuetifyLogo
-	}
-}
-</script>

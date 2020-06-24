@@ -12,7 +12,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr v-for="item in categories" :key="item.id">
+							<tr v-for="item in categories" :key="item.id" @click="$router.push('/category/'+item._id)">
 								<td>{{ item.id }}</td>
 								<td>{{ item.title }}</td>
 							</tr>
@@ -26,8 +26,7 @@
 <script>
 export default {
 	data: () => ({
-		categories: [
-		]
+		categories: []
 	}),
 	activated() {
 		this.getData()

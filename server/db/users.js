@@ -18,6 +18,9 @@ async function login(username, password) { }
 async function gatUsersList() {
     return (await model.find({}))
 }
+async function getUserById(id) {
+    return (await model.findById(id))
+}
 async function addUser() { }
 async function delUser() { }
 async function editUser() { }
@@ -25,6 +28,7 @@ async function editUser() { }
 module.exports = {
     login,
     gatUsersList,
+    getUserById,
     addUser,
     delUser,
     editUser

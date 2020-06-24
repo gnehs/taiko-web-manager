@@ -58,12 +58,16 @@ const model = mongoose.model('song', Song)
 async function getSongsList() {
     return (await model.find({}))
 }
+async function getSongById(id) {
+    return (await model.findById(id))
+}
 async function addSong() { }
 async function delSong() { }
 async function editSong() { }
 
 module.exports = {
     getSongsList,
+    getSongById,
     addSong,
     delSong,
     editSong

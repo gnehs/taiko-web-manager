@@ -27,12 +27,16 @@ const model = mongoose.model('category', Category)
 async function getCategoriesList() {
     return (await model.find({}))
 }
+async function getCategoryById(id) {
+    return (await model.findById(id))
+}
 async function addCategory() { }
 async function editCategory() { }
 async function delCategory() { }
 
 module.exports = {
     getCategoriesList,
+    getCategoryById,
     addCategory,
     editCategory,
     delCategory

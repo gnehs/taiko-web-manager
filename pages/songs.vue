@@ -7,13 +7,15 @@
 					<v-simple-table fixed-header max-height="300px">
 						<thead>
 							<tr>
+								<th class="text-left" width="10%">id</th>
 								<th class="text-left">title</th>
 								<th class="text-left">category</th>
 								<th class="text-left">type</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr v-for="item in songs" :key="item.name">
+							<tr v-for="item in songs" :key="item.name" @click="$router.push('/song/'+item._id)">
+								<td>{{ item.id }}</td>
 								<td>{{ item.title }}</td>
 								<td>{{ categories[item.category_id] }} ({{item.category_id}})</td>
 								<td>{{ item.type }}</td>
@@ -28,8 +30,7 @@
 <script>
 export default {
 	data: () => ({
-		songs: [
-		],
+		songs: [],
 		categories: {}
 	}),
 	activated() {
